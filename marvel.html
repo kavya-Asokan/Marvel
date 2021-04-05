@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+.footer {
+   <!-- position: sticky; -->
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+.ul{
+list-style-type: none;
+}
+.chat-box {
+    position:fixed;
+    right:15px;
+    bottom:120;
+    box-shadow:0 0 0.1em #000;
+}
+
+</style>
+<script language=javascript>
+        $(".chat-closed").on("click", function (e) {
+            $(".chat-header,.chat-content").removeClass("hide");
+            $(this).addClass("hide");
+        });
+
+        $(".chat-header").on("click", function (e) {
+            $(".chat-header,.chat-content").addClass("hide");
+            $(".chat-closed").removeClass("hide");
+        });
+		
+                $("#li_mss").click(function (e) {
+                    e.preventDefault();
+                   
+                    $('#chats').removeClass('stickyActive');
+
+                    updateSticky(0);
+                    setupMetroBanner(0);
+                    reArrangeTiles(0);
+                });
+
+                $("#li_ess").click(function (e) {
+                    e.preventDefault();
+                   
+                    $('#chats').removeClass('stickyActive');
+
+                    mss_idx = categories.indexOf("joining");
+                    updateSticky(mss_idx);
+                    reArrangeTiles(mss_idx);
+                    setupMetroBanner(mss_idx);
+                });
+    </script>
+<body>
+
+<div class="container p-4 my-5 border">
+<div class="row">
+<div class="col-md-3">
+  <img src="img/group 31.png" alt="logo" ></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <img src="img/phone-receiver (4).png" alt="ph"><span style="color: #919EAB;font-family: Titillium;font-size: 10px;letter-spacing: 0.33px;line-height: 12px;text-align: left;">Hospital</span>
+  <br/>
+  <span style=" color: #637381;
+  font-family: StagSans;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  text-align: left;">080 43420100 080 22147147</span>
+  </div>
+  <div class="col-md-2">
+  <img src="img/alarm (1).png">
+  <span style=" color: #DE3618;
+  font-family: Titillium;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  text-align: left;">Emergency</span><br/><span style="color: #DE3618;
+  font-family: StagSans;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 14px;
+  text-align: left;">080 4647 4647</span>
+  
+  </div>
+ <div class="col-md-2"><img src="img/maps-and-flags.png"></div>
+ <div class="col-md-2"></div>
+ <div class="row">
+ <div class="col-md-8"></div>
+ <div ><span style=" color: #195198;
+  font-family: Titillium;
+  font-size: 18px;
+  text-align: left;"><span>Our Doctor| Our specialities|Virtual Tour</span></div>
+ </div>
+</div>
+<div class="row"><span style="display: block;color:blue;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+   border-radius: -0.75rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #8080801f;">Home ><span>Setting</span></p> 
+</div>
+<div class="row">
+
+<h2 style="color: #212B36;
+  font-family: Titillium;
+  font-size: 29px;
+  line-height: 35px;
+  text-align: left;" >Aster Centres of Excellence</h2></div>
+  <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img1.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Cardiac Science</span>
+  </div></div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img2.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Neurosciences</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img3.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Comprehensive Cancer Care</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img4.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Medical Gastroenterology</span>
+  </div></div>
+  </div>
+  
+   <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img5.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Surgery and Allied specialities</span>
+  </div></div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img6.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Integrated Liver Care</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border">
+  <img src="img/img7.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">Urology and Nephrology</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border">
+  <img src="img/img8.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">Orthopaedics</span>
+  </div></div>
+  
+    <!-- <div class="chat-box" id="chats"> -->
+        <!-- <div class="chat-closed"> Chat </div> -->
+        <!-- <div class="chat-header hide"><div class="box"></div>Online Support (Click Here to Close)</div> -->
+        <!-- <div class="chat-content hide">         -->
+        <!-- <iframe id="cht" src="chat.html" width="100%" height="340px"></iframe> -->
+        <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+  <div class="sticky-containerESSMSS">
+		            <ul class="stickyESSMSS">
+			            <li id="li_ess" class="stickyActive">
+				            <img src="img/side.png">			
+			            </li>
+			            
+                        
+		            </ul>
+	            </div>
+  </div>
+     <div class="row">
+
+  <div class="col-md-3">
+ </div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border">
+  <img src="img/img6.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Integrated Liver Care</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img7.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Urology and Nephrology</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img8.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Orthopaedics</span>
+  </div></div>
+   <div class="col-md-3">
+ </div>
+  </div>
+  <div class="w3-panel w3-card-2">
+  <div class="row">
+
+<h2 style="color: #212B36;
+  font-family: Titillium;
+  font-size: 29px;
+  line-height: 35px;
+  text-align: left;" >Multispeciality</h2></div>
+  <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img9.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Pulmonology</span>
+  </div></div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img10.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Plastic, Reconstructive & Aesthetic Surgery</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img11.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Bariatric and Metabolic surgery</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img12.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Vascular Surgery</span>
+  </div></div>
+  </div>
+    <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img9.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Internal Medicine</span>
+  </div></div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img10.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">IVF & Fertility</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img11.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">ENT</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img12.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Nuclear Medicine</span>
+  </div></div>
+  </div>
+  <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img13.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Aster NeuKIDS</span>
+  </div></div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img14.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Critical Care & Anaesthesia</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img15.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Emergency Services</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img16.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Rheumatology</span>
+  </div></div>
+  </div>
+  
+  <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img17.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Dermatology</span>
+  </div></div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img18.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Endocrinology</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img19.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Ophthalmology</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img20.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Clinical Imaging & Interventional Radiology</span>
+  </div></div>
+  </div>
+  
+  <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img21.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Infectious Disease & Travel Medicine</span>
+  </div></div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img22.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Physiotherapy & Rehabilitation</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img23.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Dental Sciences</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img24.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Craniomaxillofacial Surgery</span>
+  </div></div>
+  </div>
+  
+  <div class="row">
+   <div class="col-md-2"></div>
+  <div class="col-md-2">
+ </div>
+    <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img25.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Psychiatry and counselling services</span>
+  </div></div>
+     <div class="col-md-2">
+  <div class="container p-3 my-3 border" style=" background-color: #FFFFFF;
+  border: 1px solid #DBDFE2;
+  border-radius: 4px;
+  box-shadow: 11px 5px 25px 1px rgba(0, 0, 0, 0.04);
+  width: 182px;
+  height: 203px;">
+  <img src="img/img26.png">
+  <br/>
+  <span style="color: #184F93;
+  font-family: Titillium;
+  font-size: 16px;
+  line-height: 19px; 
+  text-align: center;">Aster wellness</span>
+  </div></div>
+     <div class="col-md-2">
+ </div>
+  </div>
+  </div>
+  
+  
+<div class="footer">
+<div class="row">
+<div class="col-md-2">
+ <ul style="list-style-type: none; text-align: left;" >
+  <li style="text-decoration: underline;">Patient Service</li>
+  <li>Online Registration</li>
+  <li>Online Payment</li>
+  <li>Admission and Discharge</li>
+  <li>Insurance</li>
+  <li>Guidelines for Patients</li>
+  <li>Visiting Guidelines for ICU</li>
+  <li>Patients Rights and Responsibilities</li>
+    <li style="text-decoration: underline;">Corporate</li>
+  <li>About Aster</li>
+  <li>Chairman's Message</li>
+  <li>Vision values and Promise</li>
+  <li>Aster CMI Hospital</li>
+  <li>CEO's Message</li>
+ 
+</ul>  
+</div>
+<div class="col-md-2">
+<ul style="list-style-type: none; text-align: left;" >
+  <li style="text-decoration: underline;">Multispeciality</li>
+  <li>Pulmonology</li>
+  <li>Plastic,Reconstructive & Aesthetic</li>
+  <li>Surgery</li>
+  <li>Bariatric and Metabolic Surgery</li>
+  <li>Vascular Surgery</li>
+  <li>Internal Medicine</li>
+  <li>IVF & Fertility</li>
+  <li>ENT</li>
+  <li>Nuclear Medicine</li>
+  <li>Aster NeuKIDS</li>
+  <li>Critical Care & Anaesthesia</li>
+  <li>Rheumatology</li>
+  <li>Dermatology</li>
+  <li>Endocrinology</li>
+  <li>Ophthalmology</li>
+  <li>Clinical Imaging & Interventional</li>
+  <li>Radiology</li>
+  <li>Infectious Disease and Travel</li>.
+  <li>Clinical Imaging and Interventional</li>
+  <li>Medicine</li>
+  <li>Pysiotherapy and Rehabilitation</li>
+  <li>Dental Science</li>
+  <li>Craniomaxillofacial Surgey</li>
+  <li>Psychiatry and Counselling Service</li>
+  
+ 
+ 
+</ul> 
+</div>
+<div class="col-md-2">
+<ul style="list-style-type: none; text-align: left;" >
+  <li style="text-decoration: underline;">Aster Center of Excellence</li>
+  <li>Cardiac Sciences</li>
+  <li>Neurosciences</li>
+  <li>Medicine Gastroenterology</li>
+  <li> Surgery & Allied Specialities</li>
+  <li>Intergrated liver Care</li>
+  <li>Comprehensive cancer care</li>
+  <li>Organ Transpant</li>
+  <li>Urology & Nephrology</li>
+  <li>orthopadics</li>
+  <li>Obstetics & Gynaeocology</li>
+  <li>Child & Adolosence Health</li>
+  <li>Robotic Surgery</li>
+  
+  
+ 
+ 
+</ul>  
+</div>
+
+<div class="col-md-2">
+<ul style="list-style-type: none; text-align: left;" >
+  <li style="text-decoration: underline;">Facilities</li>
+  <li>Operation Theater</li>
+  <li>Ambulance Service</li>
+  <li>Diagnostics</li>
+  <li>Blood Bank</li>
+  <li>Aster Care</li>
+  <li style="text-decoration: underline;">Aster Media center</li>
+  <li>Events and news</li>
+  <li>Testimonial</li>
+  <li>Gallery</li>
+  <li>Organ transparent Authorisation	</li>
+  <li>Bio medical waste report</li>
+
+  
+ 
+ 
+</ul>  
+</div>
+<div class="col-md-3">
+<ul style="list-style-type: none; text-align: left;" >
+  <li ><img src="img/maps-and-flags.png">Our Location</li>
+  <li>Aster CMI Hospital</li>
+  <li>#43/2,New Aiport Road</li>
+  <li>NH-7,Sahankara Nagar</li>
+  <li>Hebbal,Bangalore,Karnataka 560092,India</li>
+  <li>Aster Care</li>
+  <li><img src="img/phone-receiver (4).png">Contact & Social Media</li>
+  <li>Tel:080-043420100</li>
+  <li>email:Customercare.aster@aseterhospital.com</li>
+  
+
+  
+ 
+ 
+</ul>  
+</div>
+</div>
+
+</body>
+</html>
